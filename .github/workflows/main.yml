@@ -7,6 +7,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+    - name: Set up Git User
+  run: |
+    git config --global user.email "your-github-email@example.com"
+    git config --global user.name "BigTapSecurity"
+
       - uses: actions/checkout@v3
       - name: Deploy GitHub Pages
         run: |
